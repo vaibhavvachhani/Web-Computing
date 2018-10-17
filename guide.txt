@@ -1,0 +1,16 @@
+This git repository contains 1 project in 2 parts 
+
+The first assignment consists of 5 html pages mostly with CSS, HTML and JavaScript. It implements JavaScript validation to
+validate data entered by users.
+
+The second part (/assesment-part 2/) contains a website implementing following features:
+            .) Server side validation using PHP
+            .) Storing user data in a MySQL database (log in credentials and personal information)
+            .) Securing website from cross site scripting and SQL injects attacks
+            .) Generating dynamic pages using google maps API
+            .) Mobile ready design
+            .) Micro data and Meta Data
+            .) Enable signed up users to log in
+            .) Provide special features only to logged in users.
+            .) Submit data using forms once user has logged in.
+            
