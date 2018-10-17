@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Basic specifications, so the browser runs as we would like it to -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- In order: linking CSS, the font Raleway from google fonts, the fontawesome 'font', our js, and the google maps API for address fetching -->
+  <link href="style.css" type="text/css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <script src="my.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDsxNCFEgf3LyAFHoPiCctzF1y1OIeWjnM" type="text/javascript"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <title>Search Page</title>
+</head>
+
+<body>
+  <!-- Contaner div encapsulates the whole page, used to determine footer (end) placement -->
+  <div class="container">
+    <!-- Header. H1, Logo, and major page links organised within the menu_items class -->
+    <div id="header">
+      <h1>Connectr</h1>
+      <img src="images/128pxicon.png" alt="Logo">
+      <div class="menu_items">
+        <a href="search.html">Log In/Register</a>
+      </div>
+    </div>
+    <!-- Content div for main content of page, goes to end of content. Keeps all main content in a window, for footer (bottom) placement.  -->
+    <div id="content">
+      <h1>Search for WiFi networks, in your area!</h1>
+      <div id="search_box">
+        <form action="/action_page.php">
+          <!-- Search box div above is dynamic and keeps things organised. Script to search above, but not used. -->
+          <!-- As above, so below for rest of inputs -->
+          <label for="conname">Network Name</label>
+          <input type="text" id="conname" name="connection_name" placeholder="Network name">
+          <!-- Input has type, id, name, and a greyed placeholder name -->
+          <!-- Executes thes script to retrieve user's address on click, fills the locname box -->
+            <!--<input type="button" value="Determine automatically" onclick="getLocation();">-->
+          <div class="geolocation-container">
+            <label for="locname">Location</label>
+            <input type="text" id="locname" name="location" placeholder="Location name">
+            <button type="button" value="Determine automatically" onclick="getLocation();"><i class="fas fa-map-marker-alt"></i></button>
+          </div>
+
+          <label for="suburb">Suburb</label>
+          <select id="suburb" name="suburb" class="dropdown">
+            <option value="notchosen">Suburb name</option>
+            <option value="brisbane city">Brisbane City</option>
+            <option value="chermside">Chermside</option>
+            <option value="fortitude valley">Fortitude Valley</option>
+            <option value="new farm">New Farm</option>
+          </select>
+
+          <label for="rating">Rating</label>
+          <select id="rating" name="rating" class="dropdown">
+          <option value="notchosen">Rating</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+
+          <!-- <button type="submit" value="Search"><i class="fas fa-search"></i>Search</button> -->
+          <input type="submit" value="Search">
+        </form>
+      </div>
+    </div>
+
+    <!-- Footer placed after content, and container divs. Container div acts as the start of the footer, the container being the end
+         this means the footer is always on the bottom -->
+    <div id="footer">
+      <h1>Connectr</h1>
+      <img src="images/128pxicon.png" alt="Logo">
+      <div class="menu_items">
+        <a href="search.html">Contact Us</a>
+        <a href="search.html">Leave Feedback</a>
+        <a href="search.html">Privacy and Terms</a>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

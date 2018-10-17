@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Basic specifications, so the browser runs as we would like it to -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- In order: linking CSS, the font Raleway from google fonts, and the fontawesome 'font'  -->
+  <link href="style.css" type="text/css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+  <title>Results Page</title>
+</head>
+
+<body>
+  <!-- Contaner div encapsulates the whole page, used to determine footer (end) placement -->
+  <div class="container">
+    <!-- Header. H1, Logo, and major page links organised within the menu_items class -->
+    <div id="header">
+      <h1>Connectr</h1>
+      <img src="images/128pxicon.png" alt="Logo">
+      <div class="menu_items">
+        <a href="search.html">Log In/Register</a>
+      </div>
+    </div>
+    <!-- Content div for main content of page, goes to end of content. Keeps all main content in a window, for footer (bottom) placement.  -->
+    <div id="content">
+      <h1>Search Results</h1>
+      <!-- Grid container organises a pseudo-grid of results_container divs  -->
+      <div id="grid_container">
+        <!-- Results container holds the image (results_container), and details (results_box) of the individual search results -->
+        <div class="results_container">
+          <div class="results_img_box">
+            <img src="map2.png" alt="network 002">
+          </div>
+          <div class="results_box">
+            <h2>Queen Street Mall Telstra Free Wifi</h2>
+            <p><b>Signal Strength</b>25%</p>
+            <p><b>Secure</b></p>
+            <p><b>Star Rating</b>
+              <!-- Using Font Awesome for stars. There are five stars in a star rating, however six appear here.
+                   The stack classed star is actually a half-star, on top of an unchecked star, to appear as a 1/2 rating  -->
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star unchecked"></span>
+              <span class="fa fa-star-half stack"></span>
+              <span class="fa fa-star unchecked"></span>
+            </p>
+            <p><b>Users</b>134</p>
+            <br>
+            <!-- Normally the submit button would have js attached to it to go to the item page -->
+            <input type="submit" value="View">
+          </div>
+        </div>
+        <div class="divider_results"></div>
+
+        <!-- Content the same as the previous results_container div  -->
+        <div class="results_container">
+          <div class="results_img_box">
+            <img src="map2.png" alt="network 002">
+          </div>
+          <div class="results_box">
+            <h2>Queen Street Mall Telstra Free Wifi</h2>
+            <p><b>Signal Strength</b>25%</p>
+            <p><b>Secure</b></p>
+            <p><b>Star Rating</b>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star unchecked"></span>
+              <span class="fa fa-star-half stack"></span>
+              <span class="fa fa-star unchecked"></span>
+            </p>
+            <p><b>Users</b>134</p>
+            <br>
+            <input type="submit" value="View">
+          </div>
+        </div>
+        <div class="divider_results"></div>
+
+        <!-- Content the same as the previous results_container div  -->
+        <div class="results_container">
+          <div class="results_img_box">
+            <img src="map2.png" alt="network 002">
+          </div>
+          <div class="results_box">
+            <h2>Queen Street Mall Telstra Free Wifi</h2>
+            <p><b>Signal Strength</b>25%</p>
+            <p><b>Secure</b></p>
+            <p><b>Star Rating</b>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star unchecked"></span>
+              <span class="fa fa-star-half stack"></span>
+              <span class="fa fa-star unchecked"></span>
+            </p>
+            <p><b>Users</b>134</p>
+            <br>
+            <input type="submit" value="View">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="divider_results"></div>
+
+    <!-- Footer placed after content, and container divs. Container div acts as the start of the footer, the container being the end
+         this means the footer is always on the bottom -->
+    <div id="footer">
+      <h1>Connectr</h1>
+      <img src="images/128pxicon.png" alt="Logo">
+      <div class="menu_items">
+        <a href="search.html">Contact Us</a>
+        <a href="search.html">Leave Feedback</a>
+        <a href="search.html">Privacy and Terms</a>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<head>
+  <!-- Basic specifications, so the browser runs as we would like it to -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- In order: linking CSS, the font Raleway from google fonts, the fontawesome 'font', and our js  -->
+  <link href="style.css" type="text/css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+  <script type="text/javascript" src="my.js"></script>
+  <title>Individual Item Page</title>
+</head>
+
+<body>
+  <!-- Contaner div encapsulates the whole page, used to determine footer (end) placement -->
+  <div class="container">
+    <!-- Header. H1, Logo, and major page links organised within the menu_items class -->
+    <div id="header">
+      <h1>Connectr</h1>
+      <img src="images/128pxicon.png" alt="Logo">
+      <div class="menu_items">
+        <a href="search.html">Log In/Register</a>
+      </div>
+    </div>
+    <!-- Content div for main content of page, goes to end of content. Keeps all main content in a window, for footer (bottom) placement.  -->
+    <div id="content">
+      <h1>Item Name</h1>
+      <!-- Encapsulates top network map which shows larger map of area than results -->
+      <div id="network">
+        <img src="wifi-map.jpg" class="image" alt="wifi-logo">
+      </div>
+      <div class="individualBoxes">
+        <h3>Details</h3>
+        <!-- Listbox contains lists, formatted well, visually, and a border -->
+        <div class="listbox">
+          <!-- List keeps list items organised -->
+          <div class="list">
+            <ul>
+              <li class="items"><b>Name</b>Telstra_Free_Wifi</li>
+              <li class="items"><b>Strength</b>95%</li>
+              <li class="items"><b>Secure</b>Yes</li>
+              <li class="items"><b>Rating</b>
+                <!-- Font-awesome stars, stacked half-star on top of unchecked star for 1/2 star -->
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star unchecked"></span>
+                  <span class="fa fa-star-half stack"></span>
+                  <span class="fa fa-star unchecked"></span>
+              </li>
+              <li class="items"><b>Users</b>134</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Review page -->
+      <div class="individualBoxes">
+        <h3>User Reviews</h3>
+        <div class="listbox">
+          <ul>
+            <!-- Items formatted as done previosuly, @user on thend is formatted as a list link (light blue, bold) -->
+            <li class="items"><div class="userName">Joe</div>Fast and consistent.
+              <div class="starContainer">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star unchecked"></span>
+                <span class="fa fa-star-half stack"></span>
+                <span class="fa fa-star unchecked"></span>
+              </div>
+            </li>
+            <li class="items"><div class="userName">Darci</div>Signing up and agreeging to the terms everytime you connect is a bit annoying, great otherwise :)
+              <div class="starContainer">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star unchecked"></span>
+                  <span class="fa fa-star unchecked"></span>
+              </div>
+            </li>
+            <li class="items"><div class="userName">Dahlia</div>Great speed, much better than my work WiFi.
+              <div class="starContainer">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star unchecked"></span>
+                <span class="fa fa-star-half stack"></span>
+              </div>
+            </li>
+          </ul>
+          <!-- Will allow a review, in the future -->
+
+          <!-- Trigger/Open The Modal -->
+          <input type="button" onclick="openPopup()" value="Write a review" id="reviewButton">
+          <!-- The Modal -->
+          <div id="popup" class="reviewPopup">
+            <!-- Modal content -->
+            <div class="popup-content">
+              <span class="close" onclick="closePopup()"><p>Close</p><i class="fas fa-times"></i></span>
+              <p>You are not logged in. Log in to leave a review.</p>
+            </div>
+          </div>
+
+          <input type="button" value="Write a review">
+          <br>
+        </div>
+      </div>
+    </div>
+    <form>
+      <label>Enter you review</label>
+      <span class="error-server"><?php echo $locationErr;?></span>
+      <span id="locationMissing" class="error-message">review invalid</span>
+      <input type="text"  value="<?php echo $location; ?>" id="review" name="review" placeholder="Type your review here">
+
+
+      <label for="rating">Rating</label>
+      <span class="error-server"><?php echo $ratingErr;?></span>
+      <span id="ratingMissing" class="error-message">Rating invalid</span>
+      <p class="hintText">Select the minimum rating</p>
+      <select id="rating" name="rating" class="dropdown" value="<?php echo rating; ?>">
+        <option value=1>1</option>
+        <option value=2>2</option>
+        <option value=3>3</option>
+        <option value=4>4</option>
+        <option value=5>5</option>
+      </select>
+
+    </form>
+
+    <!-- Footer placed after content, and container divs. Container div acts as the start of the footer, the container being the end
+         this means the footer is always on the bottom -->
+    <div id="footer">
+      <h1>Connectr</h1>
+      <img src="images/128pxicon.png" alt="Logo">
+      <div class="menu_items">
+        <a href="search.html">Contact Us</a>
+        <a href="search.html">Leave Feedback</a>
+        <a href="search.html">Privacy and Terms</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

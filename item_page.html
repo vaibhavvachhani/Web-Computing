@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+
+<head>
+  <!-- Basic specifications, so the browser runs as we would like it to -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- In order: linking CSS, the font Raleway from google fonts, the fontawesome 'font', and our js  -->
+  <link href="style.css" type="text/css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+  <script type="text/javascript" src="my.js"></script>
+  <title>Individual Item Page</title>
+</head>
+
+<body>
+  <!-- Contaner div encapsulates the whole page, used to determine footer (end) placement -->
+  <div class="container">
+    <!-- Header. H1, Logo, and major page links organised within the menu_items class -->
+    <div id="header">
+      <h1>Connectr</h1>
+      <img src="images/128pxicon.png" alt="Logo">
+      <div class="menu_items">
+        <a href="search.html">Log In/Register</a>
+      </div>
+    </div>
+    <!-- Content div for main content of page, goes to end of content. Keeps all main content in a window, for footer (bottom) placement.  -->
+    <div id="content">
+      <!-- Encapsulates top network map which shows larger map of area than results -->
+      <div id="network">
+        <img src="wifi-map.jpg" class="image" alt="wifi-logo">
+      </div>
+      <!-- Tab links, uses JS to show CSS of specific tab -->
+      <div class="tab">
+        <button class="tablinks" onclick="openTab(event, 'Details')">Details</button>
+        <button class="tablinks" onclick="openTab(event, 'Network')">Related Networks</button>
+        <button class="tablinks" onclick="openTab(event, 'Reviews')">Reviews</button>
+        <button class="tablinks" onclick="openTab(event, 'Provider')">Provider Terms</button>
+      </div>
+      <!-- Individual tab content -->
+      <div id="Details" class="tabcontent">
+        <h3>Details</h3>
+        <!-- Listbox contains lists, formatted well, visually, and a border -->
+        <div class="listbox">
+          <!-- List keeps list items organised -->
+          <div class="list">
+            <ul>
+              <li class="items"><b>Name</b>Telstra_Free_Wifi</li>
+              <li class="items"><b>Strength</b>95%</li>
+              <li class="items"><b>Secure</b>Yes</li>
+              <li class="items"><b>Rating</b>
+                <!-- Font-awesome stars, stacked half-star on top of unchecked star for 1/2 star -->
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star unchecked"></span>
+                <span class="fa fa-star-half stack"></span>
+                <span class="fa fa-star unchecked"></span>
+              </li>
+              <li class="items"><b>Users</b>134</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Simply a list of networks, these will be links in a future version, no point ATM. -->
+      <div id="Network" class="tabcontent">
+        <h3>Related networks</h3>
+        <div class="listbox">
+          <div class="list">
+            <ul>
+              <li class="items">Brisbane_FreeWiFi</li>
+              <li class="items">OPTUS_C9913HDN</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Provider information -->
+      <div id="Provider" class="tabcontent">
+        <h3>Provider Terms and Conditions</h3>
+        <div class="listbox">
+          <p class="items">Changes to the Website Terms We may change the Website Terms from time to time by publishing an updated version on a Telstra website. By continuing to use the Telstra website you will be deemed to accept the updated Website Terms and agree to
+            be bound by them. Registration may be required to access We may require you to register with us in order to access some parts of the Telstra website. Where you register with us, you must keep your registration details confidential; you will
+            be responsible for any access to the Telstra website using your registration details, even if the access is by another person. No unlawful, infringing or offensive activity You must not post or transmit to or via the Telstra website any information
+            or material or otherwise use the Telstra website for any activity which breaches any laws or regulations, infringes a third party’s rights or privacy or is contrary to any relevant standards or codes, including generally accepted community
+            standards. You must also not permit or enable another person to do any of those things.</p>
+        </div>
+      </div>
+
+      <!-- Review page -->
+      <div id="Reviews" class="tabcontent">
+        <h3>User Reviews</h3>
+        <div class="listbox">
+          <ul>
+            <!-- Items formatted as done previosuly, @user on thend is formatted as a list link (light blue, bold) -->
+            <li class="items">Fast and consistent.<a href="" class="list">@Joe</a>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star unchecked"></span>
+              <span class="fa fa-star-half stack"></span>
+              <span class="fa fa-star unchecked"></span>
+            </li>
+            <li class="items">Signing up and agreeging to the terms everytime you connect is a bit annoying, great otherwise :)<a href="" class="list">@Darci</a>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star unchecked"></span>
+              <span class="fa fa-star unchecked"></span>
+            </li>
+            <li class="items">Great speed, much better than my work WiFi.<a href="" class="list">@Dahlia</a>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star unchecked"></span>
+              <span class="fa fa-star-half stack"></span>
+            </li>
+          </ul>
+          <!-- Will allow a review, in the future -->
+          <input type="button" value="Write a review">
+          <br>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer placed after content, and container divs. Container div acts as the start of the footer, the container being the end
+         this means the footer is always on the bottom -->
+    <div id="footer">
+      <h1>Connectr</h1>
+      <img src="images/128pxicon.png" alt="Logo">
+      <div class="menu_items">
+        <a href="search.html">Contact Us</a>
+        <a href="search.html">Leave Feedback</a>
+        <a href="search.html">Privacy and Terms</a>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+
+</html>

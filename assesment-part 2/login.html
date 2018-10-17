@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Basic specifications, so the browser runs as we would like it to -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- In order: linking CSS, the font Raleway from google fonts, the fontawesome 'font', and our js  -->
+  <link href="style.css" type="text/css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+  <script type="text/javascript" src="my.js"></script>
+  <title>Log In/Register Page</title>
+</head>
+
+<body>
+  <!-- Contaner div encapsulates the whole page, used to determine footer (end) placement -->
+  <div class="container">
+    <!-- Header. H1, Logo, and major page links organised within the menu_items class -->
+    <div id="header">
+      <h1>Connectr</h1>
+      <img src="images/128pxicon.png" alt="Logo">
+      <div class="menu_items">
+        <a href="search.html">Log In/Register</a>
+      </div>
+    </div>
+    <!-- Content div for main content of page, goes to end of content. Keeps all main content in a window, for footer (bottom) placement.  -->
+    <div id="content">
+      <h1>Welcome!</h1>
+
+      <!-- Login container is a dynamic container, which scales login boxes appropriately -->
+      <div id="login_container">
+        <h2>Login</h2>
+        <!-- Login box, attached to a (not yet existent) server submission script -->
+        <div class="login_box">
+          <form onsubmit="return validateLogin()">
+            <!-- Labels are used for inputs, keeps them together, and organised, -->
+            <!-- Type of input, id of input, name, and greyed placeholder text for instructions -->
+            <label for="username_login">Username</label>
+            <span id="usernameMissingLogin" class="error-message">Username is incorrect</span>
+            <input type="text" id="username_login" name="loginL" placeholder="Username" title="Enter your username - minimum 6 characters, maximum 16 with no symbols or special characters except _ " onchange="hideL()">
+
+            <label for="passwordLogin">Password</label>
+            <span id="passmissingLogin" class="error-message">Password is incorrect</span>
+            <input type="password" id="passwordLogin" name="passL" placeholder="Password" title="Enter your password - minimum 6 characters, maximum 16 with no symbols or special characters except _ " onchange="hideP()">
+
+            <input type="submit" value="Login">
+          </form>
+        </div>
+        <div class="divider"></div>
+        <h2>Register</h2>
+        <div class="login_box">
+          <!-- When the submit button is pressed, run validate() function -->
+          <form onsubmit="return validate()" method="post">
+
+            <!-- Labelled. Span displayed for input which has not been validated after submission. Title provides details when hovered over box
+                 Same for all inputs followung. -->
+            <label for="username1">Username</label>
+            <span id="usernameMissing" class="error-message">Username is invalid</span>
+            <input type="text" id="username1" name="login" placeholder="Username" title="Enter your username - minimum 6 characters, maximum 16 with no symbols or special characters except _ " onchange="hide1()">
+
+            <label for="email">Email</label>
+            <span id="emailInvalid" class="error-message">E-mail is invalid</span>
+            <input type="email" id="email" name="mail" placeholder="Email address" title="Enter your QUT email address" onchange="hide2()">
+
+            <label for="phoneno">Phone Number</label>
+            <span id="phoneInvalid" class="error-message">Phone number is invalid</span>
+            <input type="text" id="phoneno" name="phone" placeholder="Phone Number" title="Enter your 10-digit phone number" onchange="hide3()">
+
+            <label for="birthday">Date of Birth</label>
+            <span id="dateInvalid" class="error-message">Date is invalid</span>
+            <input type="text" id="birthday" name="datebirth" placeholder="Date of Birth (dd/mm/yy)" title="(dd/mm/yyyy) - Must be at least 18 years old" onchange="hide4()">
+
+            <label for="password1">Password</label>
+            <span id="passmissing" class="error-message">Password is invalid</span>
+            <input type="password" id="password1" name="pass" placeholder="Password" title="Enter your password - minimum 6 characters, maximum 16 with no symbols or special characters except _ " onchange="hide5()">
+
+            <label for="passConfirm">Confirm Password</label>
+            <input type="password" id="passConfirm" name="confirm" placeholder="Confirm Password" title="Confirm your password" onchange="hide5()">
+
+            <!-- Submission buttion, with value of register (so a validation buttion doesn't run for both login/register) -->
+            <input type="submit" value="Register">
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer placed after content, and container divs. Container div acts as the start of the footer, the container being the end
+         this means the footer is always on the bottom -->
+    <div id="footer">
+      <h1>Connectr</h1>
+      <img src="images/128pxicon.png" alt="Logo">
+      <div class="menu_items">
+        <a href="search.html">Contact Us</a>
+        <a href="search.html">Leave Feedback</a>
+        <a href="search.html">Privacy and Terms</a>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

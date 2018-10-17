@@ -1,0 +1,1551 @@
+/*
+    This is from a CSS Reset Template, ignore all following this comment
+    until line 100, the intention is to make sure the browser's default
+    CSS code is not interfering with ours. Check for comment at bottom
+    for our code. -Kristian
+
+    CSS Reset Credit:
+    html5doctor.com Reset Stylesheet
+    v1.6.1
+    Last Updated: 2010-09-17
+    Author: Richard Clark - http://richclarkdesign.com
+    Twitter: @rich_clark
+*/
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* change colours to suit your needs */
+
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+/*
+    End of CSS Reset, our CSS is past here.
+      ____                _____  _____ _____
+     / __ \              / ____|/ ____/ ____|
+    | |  | |_   _ _ __  | |    | (___| (___   (_)
+    | |  | | | | | '__| | |     \___ \\___ \
+    | |__| | |_| | |    | |____ ____) |___) |
+     \____/ \__,_|_|     \_____|_____/_____/  (_)
+
+    Note: some uncommented code, due to being simple, or not requiring to
+    be commented twice (within reason). What code does, however, is commented.
+*/
+
+/* Font family for everything should be raleway */
+* {
+  font-family: 'Raleway', sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+/* Minimums of body (320px being phone) */
+body {
+  min-width: 320px;
+  height: 100%;
+}
+
+/* Header with gradient BG */
+#header {
+  height: 75px;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1cccd7+0,8bdbba+100 */
+  background: #1cccd7;
+  /* Old browsers */
+  background: -moz-linear-gradient(left, #1cccd7 0%, #8bdbba 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #1cccd7 0%, #8bdbba 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #1cccd7 0%, #8bdbba 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='##1cccd7', endColorstr='#8bdbba', GradientType=1);
+  /* IE6-9 */
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5)  ;
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5)  ;
+  -moz-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5)  ;
+  /* sticky header if we ever want one position: fixed;
+  width: 100%;*/
+}
+
+/* Font-colour, padding, left 'aligned', and a font size of 2m */
+#header h1 {
+  color: white;
+  padding-left: 3%;
+  padding-top: 22px;
+  float: left;
+  font-size: 2em;
+}
+
+/* Height of 40% also sets width, aligned to header */
+#header img {
+  height: 40%;
+  align-self: center;
+  float: left;
+  padding-top: 22px;
+  padding-left: 1px;
+}
+
+/* Menu items being page links, are floated to the right side of the header */
+.menu_items {
+  float: right;
+  padding-top: 26px;
+  padding-right: 3%;
+}
+
+a {
+  margin-right: 25px;
+  margin-left: 10px;
+  font-size: 1.6em;
+  color: white;
+  text-decoration: none;
+}
+
+
+/*
+  Following are several differentiations of the CSS, for smaller screen sizes
+  this essentially takes the screen width, and, if it is not above the max-width
+  given, the code is executed (ie, for a small screen, different css will run).
+  This ensures compatability with all devices.
+*/
+
+@media screen and (max-width: 1024px) {
+  .menu_items a {
+    margin-left: 5px;
+    margin-right: 20px;
+    font-size: 1.6em;
+    vertical-align: middle;
+  }
+  .menu_items {
+    float: right;
+    padding-top: 28px;
+    padding-right: 3%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .menu_items a {
+    font-size: 1.5em;
+  }
+  .menu_items {
+    padding-top: 30px;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .menu_items a
+  {
+    margin: 0;
+    margin-right: 30px;
+    font-size: 1.4em;
+  }
+  .menu_items
+  {
+    padding-top: 30px;
+    padding-right: 2%;
+  }
+  #header .menu_items
+  {
+    padding-top: 28px;
+    padding-right: 2%;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .menu_items a
+  {
+    position: relative;
+    vertical-align: middle;
+    margin: 0;
+    font-size: 1.3em;
+  }
+  .menu_items
+  {
+    display: inline-grid;
+    float: right;
+    padding-top: 30px;
+    padding-right: 2%;
+  }
+  #header .menu_items
+  {
+    padding-top: 18px;
+    padding-right: 2%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .menu_items a
+  {
+    font-size: 1.1em;
+  }
+  .menu_items
+  {
+    padding-top: 20px;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .menu_items a
+  {
+    font-size: 1.1em;
+  }
+  #header .menu_items
+  {
+    text-align: right;
+    margin-top: -12px;
+    margin-right: 2px;
+  }
+
+  #footer .menu_items
+  {
+    font-size: 1.3em;
+    text-align: right;
+    margin-top: 7px;
+    margin-right: 10px;
+  }
+}
+
+a:hover, active {
+  text-decoration: underline;
+}
+
+/*
+  The container acts as an end for the footer, it contains everything but the
+  footer. It does this by making the min-height always equal to the page's view.
+*/
+.container {
+  min-height: 100vh;
+  position: relative;
+  background-color: white;
+}
+
+/*
+  The content acts as a wrapper for all content, minus the header, and footer.
+  This is used, so that the footer may be placed after the content.
+*/
+#content {
+  padding-bottom: 105px;
+}
+
+/*
+  Content h1 specifically is central, on the page.
+*/
+#content h1 {
+  color: #474747;
+  text-align: center;
+  font-size: 3em;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+@media screen and (max-width: 1280px) {
+  #content h1{
+  font-size: 2.8em;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #content h1{
+  font-size: 2.5em;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  }
+}
+
+@media screen and (max-width: 612px) {
+  #content h1{
+  font-size: 2em;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  }
+}
+
+/*
+  Specifying parameters for the input styling. Notice, these are inline-blocks,
+  to keep them displayed properly, and are given a border with a rounded readius
+  of 4px.
+*/
+input[type=text], select {
+  color: #474747;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 4px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=number] {
+  color: #474747;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=email] {
+  color: #474747;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=date] {
+  color: #474747;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=password], select {
+  color: #474747;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=radio], select {
+  color: #474747;
+  width: 10%;
+  padding: 12px;
+  margin: 8px 0;
+}
+
+input[type=submit] {
+  width: 100%;
+  background: #1cccd7;
+  /* Old browsers */
+  background: -webkit-linear-gradient(left, #1cccd7 0%, #8bdbba 100%);
+  background: -o-linear-gradient(left, #1cccd7 0%, #8bdbba 100%);
+  background: linear-gradient(to right, #1cccd7 0%, #8bdbba 100%);
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1cccd7', endColorstr='#8bdbba', GradientType=1);
+  /* IE6-9 */
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.4em;
+}
+
+input[type=submit]:hover {
+  text-decoration: underline;
+  background: #1cccd7;
+
+  box-shadow: 0 3px 5px none  ;
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5)  ;
+  -moz-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5)  ;
+}
+
+.search-container {
+min-width: 20em;
+}
+
+.search-container input[type=text] {
+  color: #474747;
+  width: 90%;
+  padding: 10px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.search-container button[type=button] {
+  margin-left: -50px;
+  padding: 10px 15px;
+  background: #1cccd7;
+  font-size: 1em;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: white;
+}
+
+input[type=button] {
+  display: block;
+  width: 50%;
+  background: #1cccd7;
+  color: white;
+  padding: 7px 10px;
+  margin-left: 25%;
+  margin-right: 25%;
+  border-radius: 2px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.3em;
+  margin-bottom: 2%;
+
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+input[type=button]:hover {
+  display: block;
+  text-decoration: underline;
+  background: #1cccd7;
+}
+
+button[type=button]
+{
+  display: block;
+  width: 5%;
+  background: #1cccd7;
+  color: white;
+  padding: 7px;
+  margin-left: 1%;
+  margin-right: 1%;
+  border-radius: 2px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.3em;
+}
+
+button[type=button]:hover
+{
+  display: block;
+  text-decoration: underline;
+  background: #1cccd7;
+}
+/*
+  Dropdown styling
+*/
+
+.dropdown {
+  display: block;
+  color: #474747;
+  width: 30%;
+  padding: 12px 20px;
+  margin: 4px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#search_box {
+  border-radius: 5px;
+  /*background-color: #f0f0f0;*/
+  padding: 20px;
+  padding-bottom: 10px;
+  margin-left: 20%;
+  margin-right: 20%;
+
+  background: #F8F8F8;
+  border: solid #BDBDBD 1px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5)  ;
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5)  ;
+  -moz-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5)  ;
+}
+
+.geolocation-container {
+ min-width: 15em;
+ border: none;
+ border-radius: 3px;
+ width: 100%;
+}
+
+.geolocation-container input[type=text] {
+  color: #474747;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  height: 41px;
+  float: left;
+}
+
+.geolocation-container button {
+  margin-right: 0;
+  padding: 9px 45px 8px 30px;
+  background: #8bdbba;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  color: white;
+  font-size: 125%;
+  float: right;
+  margin-top:-45px;
+}
+
+.geolocation-container button:hover {
+  background: #1cccd7;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5)  ;
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5)  ;
+  -moz-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5)  ;
+}
+
+/*
+  Specifying styling for smaller screen resolutions.
+*/
+@media screen and (max-width: 1300px) {
+  #search_box {
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    padding: 20px;
+    padding-bottom: 10px;
+    margin-left: 10%;
+    margin-right: 10%
+  }
+  .dropdown {
+    display: block;
+    color: #474747;
+    width: 60%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  /* make button dynamic*/
+  #search_box input[type=button] {
+    width: 90%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #search_box {
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    padding: 20px;
+    padding-bottom: 10px;
+    margin-left: 2%;
+    margin-right: 2%
+  }
+  .dropdown {
+    display: block;
+    color: #474747;
+    width: 60%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  /* make button dynamic*/
+  #search_box input[type=button] {
+    width: 90%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+  }
+}
+
+/*
+  Font-awesome star styling. Checked is a 1 score (1 star), unchecked is a 0 score
+  (0 stars). Usage for a three star rating would be three stars with checked class,
+  two with unchecked. For a half raing, the stacked class moves a star
+  on top of the previous star- the half star is moved on top of an unchecked star
+  in css, to give the impression of a half star rating.
+*/
+.checked {
+  color: #1cccd7;
+  margin-right: 3px;
+}
+
+.unchecked {
+  color: #474747;
+  margin-right: 3px;
+}
+
+.stack {
+  color: #1cccd7;
+  margin-left: -21px;
+}
+
+.stackItemPage {
+  color: #1cccd7;
+  margin-left: -25px;
+}
+
+/*
+  Flexible container, as to allow movement when the page is rescaled. Overflow is
+  hidden as a precaution.
+*/
+
+.results_container {
+  margin-left: 20%;
+  margin-right: 20%;
+  height: 100%;
+  padding: 2%;
+  overflow: hidden;
+  border-radius: 4px;
+  display: flex;
+}
+
+.divider_results {
+  border-bottom: 2px solid #1cccd7;
+  height: 10px;
+  margin: 0 20% 0 20%;
+  width: auto;
+}
+
+.results_container input[type=submit] {
+  overflow: hidden;
+  display: inline-block;
+  margin-left: 25%;
+  margin-right: 25%;
+  width: 50%;
+  margin-bottom: 5%;
+  background: #1cccd7;
+  /* Old browsers */
+  background: -webkit-linear-gradient(left, #1cccd7 0%, #8bdbba 100%);
+  background: -o-linear-gradient(left, #1cccd7 0%, #8bdbba 100%);
+  background: linear-gradient(to right, #1cccd7 0%, #8bdbba 100%);
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1cccd7', endColorstr='#8bdbba', GradientType=1);
+  /* IE6-9 */
+  color: white;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.3em;
+}
+
+.results_container input[type=submit]:hover {
+  background: #1cccd7;
+  /* Old browsers */
+  background: -moz-linear-gradient(left, #1cccd7 0%, #8bdbba 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #1cccd7 0%, #8bdbba 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #1cccd7 0%, #8bdbba 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1cccd7', endColorstr='#8bdbba', GradientType=1);
+  /* IE6-9 */
+}
+
+/*
+  General styling for the results page follows
+*/
+.results_img_box {
+  width: 45%;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  display: inline-block;
+  border: solid #BDBDBD 1px;
+  border-radius: 4px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5)  ;
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5)  ;
+  -moz-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5)  ;
+}
+
+.results_img_box img {
+  width: 100%;
+  border-radius: 4px;
+  border: solid #BDBDBD 1px;
+  border-radius: 4px;
+}
+
+.results_box {
+  border-radius: 4px;
+  border: solid #BDBDBD 1px;
+  overflow: hidden;
+  background-color: #F8F8F8;
+  padding: 1%;
+  width: 45%;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  display: inline-block;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5)  ;
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5)  ;
+  -moz-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5)  ;
+}
+
+.results_box p {
+  overflow: hidden;
+  color: #474747;
+  text-align: center;
+  padding-top: 5%;
+}
+
+.results_box b {
+  overflow: hidden;
+  padding-right: 5%;
+  padding-left: 5%;
+}
+
+.results_box h2 {
+  overflow: hidden;
+  font-size: 1.5em;
+  color: #474747;
+  text-align: center;
+  vertical-align: top;
+  padding-bottom: 5%;
+}
+
+/*
+  Small-screen styling for the results page. Decreases margins, and such.
+*/
+@media screen and (max-width: 1600px) {
+  .results_container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    height: 100%;
+    padding: 2%;
+    display: flex;
+  }
+
+  .divider_results {
+    border-bottom: 2px solid #1cccd7;
+    height: 10px;
+    margin: 0 auto 0 auto;
+    width: 90%;
+    display: flex;
+  }
+
+  .results_box {
+    padding: 1%;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/*
+  Small-screen styling for the results page. Decreases margins to very small
+  sizes.
+*/
+@media screen and (max-width: 1024px) {
+  .results_container {
+    margin-left: 3%;
+    margin-right: 3%;
+    width: 90%;
+    height: 100%;
+    display: inline-grid;
+  }
+
+  .results_box {
+    padding: 2%;
+    width: 90%;
+    height: auto;
+    margin: auto;
+    display: inline-block;
+    margin-top: 3%;
+  }
+
+  .results_box p {
+    overflow: hidden;
+    color: #474747;
+    text-align: center;
+    padding-top: 2%;
+  }
+
+  .results_box h2 {
+    padding-bottom: 2%;
+  }
+
+  .results_container input[type=submit] {
+    margin-bottom: 1%;
+  }
+
+  .divider_results {
+    margin: 0 auto 0 auto;
+    display: flex;
+    width: 90%;
+    height: 90%;
+  }
+
+  .results_img_box {
+    display: inline-flex;
+    height: 350px;
+    width: 90%;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 525px) {
+  .results_container {
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    width: 90%;
+    height: 100%;
+    display: inline-grid;
+  }
+
+  .results_box {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .results_container input[type=submit] {
+    padding: 10px;
+    font-size: 1.1em;
+  }
+
+  .results_img_box {
+    display: inline-flex;
+    height: 200px;
+    width: 90%;
+    margin: auto;
+  }
+}
+
+#login_container {
+  margin-left: 20%;
+  margin-right: 20%;
+  padding-top: 40px;
+  height: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.login_box {
+  border-radius: 5px;
+  padding: 2%;
+  width: 40%;
+  margin: 2%;
+  display: inline-block;
+  vertical-align: top;
+  background: #F8F8F8;
+  border: solid #BDBDBD 1px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5)  ;
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5)  ;
+  -moz-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5)  ;
+}
+
+.divider {
+  border-left: 2px solid #1cccd7;
+  height: 610px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/*
+  Login page styling
+*/
+#login_container h2 {
+  font-size: 2em;
+  padding-left: 50px;
+  margin: -20px;
+  /*padding: 0 10px 10px 0;*/
+  color: #474747;
+  display: inline-block;
+  vertical-align: top;
+  position: absolute;
+}
+
+@media screen and (max-width: 1280px) {
+  #login_container h2 {
+    font-size: 2em;
+    padding-left: 50px;
+    margin: -32px;
+    /*padding: 0 10px 10px 0;*/
+    color: #474747;
+    display: inline-block;
+    vertical-align: top;
+    position: absolute;
+  }
+
+  .divider {
+    border-left: 2px solid #1cccd7;
+    height: 580px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  #login_container {
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-top: 40px;
+    height: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #login_container {
+    margin-left: 2%;
+    margin-right: 2%;
+    padding-top: 40px;
+    height: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+
+  .login_box {
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    padding: 3%;
+    width: 40%;
+    margin: 1%;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  .divider {
+    border-left: 2px solid #1cccd7;
+    height: 600px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+/*
+  For very small screens, the login styling actually changes a great amount.
+  Instead of being displayed horizontally, in a list, content now uses more
+  vertical space, as horizontal space is not abundant. This is achieved by
+  moving to a grid display via the login_container, which keeps everything in
+  line, and changing other elements to flex, with no margins, which squishes them
+  to the bottom of the container box, instead of to the right. Essentially,
+  horizontal space is used simply to display the entierety of one element,
+  and vertical space is used to show following elements.
+*/
+
+@media screen and (max-width: 652px) {
+  #login_container {
+    margin-left: 2%;
+    margin-right: 2%;
+    padding-top: 0;
+    height: 100%;
+    height: auto;
+    overflow: hidden;
+    display: inline-grid;
+  }
+  #login_container h2 {
+    font-size: 2em;
+    padding: 5%;
+    padding-top: 0;
+    margin: 0;
+    color: #474747;
+    display: inline-block;
+    position: relative;
+  }
+  .login_box {
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    padding: 3%;
+    width: 90%;
+    margin: 2.5%;
+    display: flex;
+    vertical-align: top;
+  }
+  .divider {
+    border-top: 2px solid #1cccd7;
+    border-left: none;
+    width: 100%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    height: 0%;
+    padding-bottom: 5%;
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+#resultbox h1 {
+  color: #474747;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-size: 3em;
+}
+
+#resultbox table {
+  margin-bottom: 300px;
+  margin: auto;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+/*
+  Individual item page styling
+*/
+
+td:hover {
+  background-color: #f5f5f5;
+}
+
+th {
+  border: 1px solid black;
+  border-collapse: collapse;
+  text-align: center;
+  height: 50px;
+}
+
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  height: 50px;
+  vertical-align: middle;
+}
+
+#rbox {
+  margin: 2% 8.5% 2% 8.5%;
+  height: auto;
+  display: inline-block;
+}
+
+#img {
+  border: 1px solid black;
+  float: left;
+  width: 40%;
+  margin-left: 20%;
+}
+
+#detail {
+  border: 1px solid black;
+  float: right;
+  margin-right: 20%;
+}
+
+
+/*
+  Footer styling. Position absolute, as to assure it's always in the correct
+  spot, at the bottom of the page, or at the bottom of all content.
+*/
+#footer {
+  margin-top: 30px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  min-width: 320px;
+  height: 75px;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1cccd7+0,8bdbba+100 */
+  background: #1cccd7;
+  /* Old browsers */
+  background: -moz-linear-gradient(left, #1cccd7 0%, #8bdbba 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #1cccd7 0%, #8bdbba 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #1cccd7 0%, #8bdbba 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='##1cccd7', endColorstr='#8bdbba', GradientType=1);
+  /* IE6-9 */
+}
+
+#footer h1 {
+  color: white;
+  padding-left: 3%;
+  padding-top: 26px;
+  float: left;
+  font-size: 1.5em;
+}
+
+#footer img {
+  height: 30%;
+  align-self: center;
+  float: left;
+  padding-left: 1px;
+  padding-top: 25px;
+}
+
+#network img {
+  border-radius: 4px;
+  height: 40%;
+  width: 40%;
+  margin-left: 30%;
+  margin-right: auto;
+  background: #F8F8F8;
+  border: solid #BDBDBD 1px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5)  ;
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5)  ;
+  -moz-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5)  ;
+}
+
+#network ul {
+  list-style-type: none;
+  margin: 0;
+}
+
+#network {
+  padding-bottom: 1%;
+}
+
+/*
+  Individual item page styling. cont.
+*/
+
+.list {
+  color: #1cccd7;
+  font-size: 1em;
+  padding-left: 0.15%;
+}
+
+.userName {
+  color: #1cccd7;
+  font-size: 1em;
+  font-weight: bold;
+  display: block;
+  font-size: 20px;
+  padding-bottom: 5px;
+}
+
+.list b {
+  padding-right: 2.5%;
+}
+
+/*
+  Style the individual item page tabs
+*/
+.tab {
+  overflow: hidden;
+  border-radius: 4px;
+  margin: 0 auto;
+  margin-left: 20%;
+  margin-right: 20%;
+  width: auto;
+  background: #F8F8F8;
+  border: solid #BDBDBD 1px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5)  ;
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5)  ;
+  -moz-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5)  ;
+}
+
+/*
+  Style the tab buttons
+*/
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: 1px none;
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  width: 15%;
+  margin-left: 9%;
+  margin-right: 9%;
+}
+
+/* Change background color of buttons on hover */
+
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+
+.tab button.active {
+  background-color: #ddd;
+}
+
+/* Style the tab content */
+
+h3 {
+  padding-bottom: 1%;
+}
+
+.individualBoxes {
+  border-radius: 4px;
+  width: 50%;
+  margin: 10px auto 10px auto;
+  color: #474747;
+  background: white;
+}
+
+/*
+  list-style-type is none to remove bullet point. Just want the list formatting.
+*/
+.items {
+  list-style-type: none;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  color: #474747;
+}
+
+.starContainer{
+  display: block;
+  margin-top: 5px;
+}
+
+.listbox {
+  border-radius: 4px;
+  padding: 20px;
+  color: #474747;
+  height: auto;
+  background: #F8F8F8;
+  border: solid #BDBDBD 1px;
+}
+
+/*
+  Review button formatting
+*/
+
+.listbox input[type=button] {
+  display: inline-block;
+  width: 50%;
+  background: #8bdbba;
+  /* Old browsers */
+  background: -webkit-linear-gradient(left, #1cccd7 0%, #8bdbba 100%);
+  background: -o-linear-gradient(left, #1cccd7 0%, #8bdbba 100%);
+  background: linear-gradient(to right, #1cccd7 0%, #8bdbba 100%);
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1cccd7', endColorstr='#8bdbba', GradientType=1);
+  /* IE6-9 */
+  color: white;
+  padding: 7px 10px;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-bottom: auto;
+  margin-top: 1%;
+  border-radius: 2px;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.review {
+  padding-top: 3px;
+  padding-left: 4px;
+  padding-bottom: 3px;
+}
+
+/*
+  Small-screen styling for individual item page
+*/
+
+@media screen and (max-width: 1280px) {
+  .individualBoxes {
+    width: 80%;
+    margin: 10px auto 10px auto;
+  }
+
+  #network img {
+    height: 50%;
+    width: 50%;
+    margin: 10px auto 10px 25%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .individualBoxes {
+    width: 90%;
+    margin: 10px auto 10px auto;
+  }
+
+  #network img {
+    height: 60%;
+    width: 60%;
+    margin: 10px auto 10px 20%;
+  }
+}
+
+@media screen and (max-width: 612px) {
+  .individualBoxes {
+    width: 90%;
+    margin: 10px auto 10px auto;
+  }
+
+  #network img {
+    height: 80%;
+    width: 80%;
+    margin: 10px auto 10px 10%;
+  }
+}
+
+.error-message {
+  visibility: hidden;
+  color: #d7281c;
+  float: right;
+}
+
+.error-server {
+  color: #d7281c;
+  visibility: visible;
+}
+
+p.hintText{
+  color: #656363;
+  padding-top: 8px;
+  font-size: 13px;
+}
+
+/* The Modal (background) */
+.reviewPopup {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.popup-content {
+  margin: auto;
+  width: 80%;
+  min-width: 320px;
+  padding: 10px;
+  min-height: 10%;
+  background: #f0f0f0;
+  border: solid #BDBDBD 1px;
+  border-radius: 4px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5)  ;
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5)  ;
+  -moz-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5)  ;
+}
+
+@media screen and (max-width: 612px) {
+  .popup-content {
+    width: 90%;
+  }
+}
+
+.popup-content p{
+  padding-top: 45px;
+  margin: auto;
+  text-align: center;
+}
+
+.popup-content span{
+  margin: 0;
+  padding: 0;
+}
+
+/* The Close Button */
+.close {
+    color: #8bdbba;
+    float: right;
+    font-size: 40px;
+    font-weight: bold;
+    padding: 0;
+}
+.close  p{
+  float: left;
+  padding: 0;
+  color: #656363;
+  font-size: 15px;
+  padding-top: 12.5px;
+  padding-right: 10px;
+}
+
+.close:hover,
+.close:focus {
+    color: #1cccd7;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.individual{
+  color: inherit;
+  text-decoration: inherit;
+  font-size: inherit;
+}
+
+.searchLink{
+  margin: 25px auto 0;
+  text-align: center;
+  width: 50%;
+  background: #f0f0f0;
+  border: solid #BDBDBD 1px;
+  border-radius: 4px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5)  ;
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5)  ;
+  -moz-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5)  ;
+  padding-bottom: 15px;
+}
+.searchLink h1{
+  font-size: 2em !important;
+  padding: 15px !important;
+}
+
+.searchLink a{
+  color: #1cccd7;
+}
+
+@media screen and (max-width: 1024px) {
+  .searchLink{
+    width: 90%;
+  }
+
+  .searchLink h1{
+    font-size: 1.8em !important;
+    padding: 10px !important;
+  }
+}
+
+.mapSearch {
+  width: 100%;
+  height: 100%;
+  position:relative;
+  overflow: hidden;
+}
+
+.overallMap{
+  width: 59%;
+  margin: auto;
+  height: 350px;
+  background: #f0f0f0;
+  border: solid #BDBDBD 1px;
+  border-radius: 4px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5)  ;
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5)  ;
+  -moz-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5)  ;
+  margin-bottom: 2%;
+}
+
+@media screen and (max-width: 1024px) {
+  .overallMap
+  {
+    width: 90%;
+    margin: auto;
+    margin-bottom: 2%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .overallMap
+  {
+    width: 90%;
+    height: 250px;
+  }
+}
+
+.noOverallMap{
+  display: none;
+}
+
+.overallMapFont h2 {
+  color: #474747;
+  text-align: center;
+  font-size: 2em;
+  padding-bottom: 0.5%;
+}
+
+.overallMapFont p {
+  color: #474747;
+  text-align: center;
+  font-size: 1.1em;
+  padding-bottom: 5px;
+}
+
+.overallMapFont input[type=submit] {
+  font-size: 1em;
+  width: 50%;
+  margin-left: 25%;
+  padding: 5px;
+}
+
+.individualItemMap {
+  width: 50%;
+  margin: auto;
+  margin-bottom: 1.2%;
+  height: 350px;
+  border: solid #BDBDBD 1px;
+  border-radius: 4px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5)  ;
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5)  ;
+  -moz-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5)  ;
+}
+
+@media screen and (max-width: 1024px) {
+  .individualItemMap
+  {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 512px) {
+  .individualItemMap
+  {
+    height: 250px;
+  }
+}
